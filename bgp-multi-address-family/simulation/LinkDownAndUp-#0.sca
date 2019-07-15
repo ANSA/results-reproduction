@@ -1,0 +1,1671 @@
+version 2
+run LinkDownAndUp-0-20190711-12:53:39-87114
+attr configname LinkDownAndUp
+attr datetime 20190711-12:53:39
+attr experiment LinkDownAndUp
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvarsf ""
+attr measurement ""
+attr network BGPTestLoopback
+attr processid 87114
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 0
+param **.scenarioManager.script "xmldoc(\"scenario2.xml\")"
+param **.ip.procDelay 1us
+param **.eth[*].queue.typename "\"EtherQosQueue\""
+param **.eth[*].queue.dataQueue.typename "\"DropTailQueue\""
+param **.eth[*].queue.dataQueue.frameCapacity 100
+param **.hasStatus true
+param **.bgpConfig "xmldoc(\"config.xml\")"
+param **.scenarioManager.script "xml(\"<empty/>\")"
+
+scalar BGPTestLoopback.R1.lo[0].lo rcvdPkFromHl:count 5
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, count"
+scalar BGPTestLoopback.R1.lo[0].lo rcvdPkFromHl:sum(packetBytes) 616
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, sum(packetBytes)"
+scalar BGPTestLoopback.R1.lo[0].lo passedUpPk:count 5
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, count"
+scalar BGPTestLoopback.R1.lo[0].lo passedUpPk:sum(packetBytes) 616
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, sum(packetBytes)"
+statistic BGPTestLoopback.R1.eth[0].queue.pauseQueue queueingTime:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr title "queueing time, histogram"
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar BGPTestLoopback.R1.eth[0].queue.pauseQueue queueLength:max 0
+attr interpolationmode sample-hold
+attr title "queue length, max"
+scalar BGPTestLoopback.R1.eth[0].queue.pauseQueue queueLength:timeavg 0
+attr interpolationmode sample-hold
+attr title "queue length, timeavg"
+scalar BGPTestLoopback.R1.eth[0].queue.pauseQueue packetReceived:count 0
+attr interpolationmode none
+attr title "received packets, count"
+scalar BGPTestLoopback.R1.eth[0].queue.pauseQueue packetReceived:sum(packetBytes) 0
+attr interpolationmode none
+attr title "received packets, sum(packetBytes)"
+scalar BGPTestLoopback.R1.eth[0].queue.pauseQueue dropPk:count 0
+attr interpolationmode none
+attr source packetDropped
+attr title "dropped packets, count"
+scalar BGPTestLoopback.R1.eth[0].queue.pauseQueue dropPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropped
+attr title "dropped packets, sum(packetBytes)"
+statistic BGPTestLoopback.R1.eth[0].queue.dataQueue queueingTime:histogram
+field count 78
+field mean 2.9230769230769e-07
+field stddev 1.160820268734e-06
+field min 0
+field max 7.84e-06
+field sum 2.28e-05
+field sqrsum 1.104224e-10
+attr interpolationmode none
+attr title "queueing time, histogram"
+bin	-inf	0
+bin	-0.5	0
+bin	-0.48	0
+bin	-0.46	0
+bin	-0.44	0
+bin	-0.42	0
+bin	-0.4	0
+bin	-0.38	0
+bin	-0.36	0
+bin	-0.34	0
+bin	-0.32	0
+bin	-0.3	0
+bin	-0.28	0
+bin	-0.26	0
+bin	-0.24	0
+bin	-0.22	0
+bin	-0.2	0
+bin	-0.18	0
+bin	-0.16	0
+bin	-0.14	0
+bin	-0.12	0
+bin	-0.1	0
+bin	-0.08	0
+bin	-0.06	0
+bin	-0.04	0
+bin	-0.02	0
+bin	0	78
+bin	0.02	0
+bin	0.04	0
+bin	0.06	0
+bin	0.08	0
+bin	0.1	0
+bin	0.12	0
+bin	0.14	0
+bin	0.16	0
+bin	0.18	0
+bin	0.2	0
+bin	0.22	0
+bin	0.24	0
+bin	0.26	0
+bin	0.28	0
+bin	0.3	0
+bin	0.32	0
+bin	0.34	0
+bin	0.36	0
+bin	0.38	0
+bin	0.4	0
+bin	0.42	0
+bin	0.44	0
+bin	0.46	0
+bin	0.48	0
+bin	0.5	0
+scalar BGPTestLoopback.R1.eth[0].queue.dataQueue queueLength:max 1
+attr interpolationmode sample-hold
+attr title "queue length, max"
+scalar BGPTestLoopback.R1.eth[0].queue.dataQueue queueLength:timeavg 7.6e-08
+attr interpolationmode sample-hold
+attr title "queue length, timeavg"
+scalar BGPTestLoopback.R1.eth[0].queue.dataQueue packetReceived:count 78
+attr interpolationmode none
+attr title "received packets, count"
+scalar BGPTestLoopback.R1.eth[0].queue.dataQueue packetReceived:sum(packetBytes) 6294
+attr interpolationmode none
+attr title "received packets, sum(packetBytes)"
+scalar BGPTestLoopback.R1.eth[0].queue.dataQueue dropPk:count 0
+attr interpolationmode none
+attr source packetDropped
+attr title "dropped packets, count"
+scalar BGPTestLoopback.R1.eth[0].queue.dataQueue dropPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropped
+attr title "dropped packets, sum(packetBytes)"
+scalar BGPTestLoopback.R1.eth[0].mac "simulated time" 300
+scalar BGPTestLoopback.R1.eth[0].mac full-duplex 1
+scalar BGPTestLoopback.R1.eth[0].mac "frames/sec sent" 0.16333333333333
+scalar BGPTestLoopback.R1.eth[0].mac "frames/sec rcvd" 0.16333333333333
+scalar BGPTestLoopback.R1.eth[0].mac "bits/sec sent" 104.21333333333
+scalar BGPTestLoopback.R1.eth[0].mac "bits/sec rcvd" 109.49333333333
+scalar BGPTestLoopback.R1.eth[0].mac "rx channel idle (%)" 100
+scalar BGPTestLoopback.R1.eth[0].mac "rx channel utilization (%)" 0
+scalar BGPTestLoopback.R1.eth[0].mac rxPausePkUnits:count 0
+attr interpolationmode none
+attr title "pause units received, count"
+scalar BGPTestLoopback.R1.eth[0].mac rxPausePkUnits:sum 0
+attr interpolationmode none
+attr title "pause units received, sum"
+scalar BGPTestLoopback.R1.eth[0].mac txPausePkUnits:count 0
+attr interpolationmode none
+attr title "pause units sent, count"
+scalar BGPTestLoopback.R1.eth[0].mac txPausePkUnits:sum 0
+attr interpolationmode none
+attr title "pause units sent, sum"
+scalar BGPTestLoopback.R1.eth[0].mac rxPkOk:count 49
+attr interpolationmode none
+attr source rxPkOk
+attr title "packets received OK, count"
+scalar BGPTestLoopback.R1.eth[0].mac rxPkOk:sum(packetBytes) 4106
+attr interpolationmode none
+attr source rxPkOk
+attr title "packets received OK, sum(packetBytes)"
+scalar BGPTestLoopback.R1.eth[0].mac txPk:count 49
+attr interpolationmode none
+attr source packetSentToLower
+attr title "packets transmitted, count"
+scalar BGPTestLoopback.R1.eth[0].mac txPk:sum(packetBytes) 3908
+attr interpolationmode none
+attr source packetSentToLower
+attr title "packets transmitted, sum(packetBytes)"
+scalar BGPTestLoopback.R1.eth[0].mac packetReceivedFromUpper:count 78
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packet bytes from higher layer, count"
+scalar BGPTestLoopback.R1.eth[0].mac packetReceivedFromUpper:sum(packetBytes) 6294
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packet bytes from higher layer, sum(packetBytes)"
+scalar BGPTestLoopback.R1.eth[0].mac passedUpPk:count 49
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, count"
+scalar BGPTestLoopback.R1.eth[0].mac passedUpPk:sum(packetBytes) 4106
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, sum(packetBytes)"
+scalar BGPTestLoopback.R1.eth[0].mac packetDropIncorrectlyReceived:count 0
+attr interpolationmode none
+attr source packetDropReasonIsIncorrectlyReceived(packetDropped)
+attr title "packet drop: incorrectly received, count"
+scalar BGPTestLoopback.R1.eth[0].mac packetDropIncorrectlyReceived:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsIncorrectlyReceived(packetDropped)
+attr title "packet drop: incorrectly received, sum(packetBytes)"
+scalar BGPTestLoopback.R1.eth[0].mac packetDropInterfaceDown:count 29
+attr interpolationmode none
+attr source packetDropReasonIsInterfaceDown(packetDropped)
+attr title "packet drop: interface down, count"
+scalar BGPTestLoopback.R1.eth[0].mac packetDropInterfaceDown:sum(packetBytes) 2386
+attr interpolationmode none
+attr source packetDropReasonIsInterfaceDown(packetDropped)
+attr title "packet drop: interface down, sum(packetBytes)"
+scalar BGPTestLoopback.R1.eth[0].mac packetDropNotAddressedToUs:count 0
+attr interpolationmode none
+attr source packetDropReasonIsNotAddressedToUs(packetDropped)
+attr title "packet drop: not addressed to us, count"
+scalar BGPTestLoopback.R1.eth[0].mac packetDropNotAddressedToUs:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsNotAddressedToUs(packetDropped)
+attr title "packet drop: not addressed to us, sum(packetBytes)"
+scalar BGPTestLoopback.R1.eth[0].encap pauseSent:count 0
+attr title "pause sent, count"
+scalar BGPTestLoopback.R1.eth[0].encap pauseSent:sum 0
+attr title "pause sent, sum"
+scalar BGPTestLoopback.R1.eth[0].encap decapPk:count 49
+attr interpolationmode none
+attr source decapPk
+attr title "packets decapsulated, count"
+scalar BGPTestLoopback.R1.eth[0].encap decapPk:sum(packetBytes) 3224
+attr interpolationmode none
+attr source decapPk
+attr title "packets decapsulated, sum(packetBytes)"
+scalar BGPTestLoopback.R1.eth[0].encap encapPk:count 78
+attr interpolationmode none
+attr source encapPk
+attr title "packets encapsulated, count"
+scalar BGPTestLoopback.R1.eth[0].encap encapPk:sum(packetBytes) 4680
+attr interpolationmode none
+attr source encapPk
+attr title "packets encapsulated, sum(packetBytes)"
+scalar BGPTestLoopback.R1.ipv4.ip packetDropAddressResolutionFailed:count 2
+attr interpolationmode none
+attr source packetDropReasonIsAddressResolutionFailed(packetDropped)
+attr title "packet drop: address resolution failed, count"
+scalar BGPTestLoopback.R1.ipv4.ip packetDropAddressResolutionFailed:sum(packetBytes) 99
+attr interpolationmode none
+attr source packetDropReasonIsAddressResolutionFailed(packetDropped)
+attr title "packet drop: address resolution failed, sum(packetBytes)"
+scalar BGPTestLoopback.R1.ipv4.ip packetDropHopLimitReached:count 0
+attr interpolationmode none
+attr source packetDropReasonIsHopLimitReached(packetDropped)
+attr title "packet drop: hop limit reached, count"
+scalar BGPTestLoopback.R1.ipv4.ip packetDropHopLimitReached:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsHopLimitReached(packetDropped)
+attr title "packet drop: hop limit reached, sum(packetBytes)"
+scalar BGPTestLoopback.R1.ipv4.ip packetDropForwardingDisabled:count 0
+attr interpolationmode none
+attr source packetDropReasonIsForwardingDisabled(packetDropped)
+attr title "packet drop: forwarding disabled, count"
+scalar BGPTestLoopback.R1.ipv4.ip packetDropForwardingDisabled:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsForwardingDisabled(packetDropped)
+attr title "packet drop: forwarding disabled, sum(packetBytes)"
+scalar BGPTestLoopback.R1.ipv4.ip packetDropNoInterfaceFound:count 0
+attr interpolationmode none
+attr source packetDropReasonIsNoInterfaceFound(packetDropped)
+attr title "packet drop: no interface found, count"
+scalar BGPTestLoopback.R1.ipv4.ip packetDropNoInterfaceFound:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsNoInterfaceFound(packetDropped)
+attr title "packet drop: no interface found, sum(packetBytes)"
+scalar BGPTestLoopback.R1.ipv4.ip packetDropNoRouteFound:count 0
+attr interpolationmode none
+attr source packetDropReasonIsNoRouteFound(packetDropped)
+attr title "packet drop: no route found, count"
+scalar BGPTestLoopback.R1.ipv4.ip packetDropNoRouteFound:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsNoRouteFound(packetDropped)
+attr title "packet drop: no route found, sum(packetBytes)"
+scalar BGPTestLoopback.R1.ipv4.ip packetDropUndefined:count 0
+attr interpolationmode none
+attr source packetDropReasonIsUndefined(packetDropped)
+attr title "packet drop: undefined, count"
+scalar BGPTestLoopback.R1.ipv4.ip packetDropUndefined:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsUndefined(packetDropped)
+attr title "packet drop: undefined, sum(packetBytes)"
+scalar BGPTestLoopback.R1.ipv4.arp arpResolutionFailed:count 2
+attr title "ARP failed resolutions, count"
+scalar BGPTestLoopback.R1.ipv4.arp arpResolutionCompleted:count 2
+attr title "ARP completed resolutions, count"
+scalar BGPTestLoopback.R1.ipv4.arp arpResolutionInitiated:count 3
+attr title "ARP initiated resolutions, count"
+scalar BGPTestLoopback.R1.ipv4.arp arpReplySent:count 1
+attr source arpReplySent
+attr title "ARP replies sent, count"
+scalar BGPTestLoopback.R1.ipv4.arp arpReplySent:sum(packetBytes) 28
+attr source arpReplySent
+attr title "ARP replies sent, sum(packetBytes)"
+scalar BGPTestLoopback.R1.ipv4.arp arpRequestSent:count 7
+attr source arpRequestSent
+attr title "ARP request sent, count"
+scalar BGPTestLoopback.R1.ipv4.arp arpRequestSent:sum(packetBytes) 196
+attr source arpRequestSent
+attr title "ARP request sent, sum(packetBytes)"
+scalar BGPTestLoopback.R1.ipv6.neighbourDiscovery startDad:count 1
+attr title "DAD started, count"
+scalar BGPTestLoopback.R1.bgp OPENMsgSent 4
+scalar BGPTestLoopback.R1.bgp OPENMsgRecv 4
+scalar BGPTestLoopback.R1.bgp KeepAliveMsgSent 12
+scalar BGPTestLoopback.R1.bgp KeepAliveMsgRcv 6
+scalar BGPTestLoopback.R1.bgp UpdateMsgSent 4
+scalar BGPTestLoopback.R1.bgp UpdateMsgRcv 12
+scalar BGPTestLoopback.R2.lo[0].lo rcvdPkFromHl:count 5
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, count"
+scalar BGPTestLoopback.R2.lo[0].lo rcvdPkFromHl:sum(packetBytes) 616
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, sum(packetBytes)"
+scalar BGPTestLoopback.R2.lo[0].lo passedUpPk:count 5
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, count"
+scalar BGPTestLoopback.R2.lo[0].lo passedUpPk:sum(packetBytes) 616
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, sum(packetBytes)"
+statistic BGPTestLoopback.R2.eth[0].queue.pauseQueue queueingTime:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr title "queueing time, histogram"
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar BGPTestLoopback.R2.eth[0].queue.pauseQueue queueLength:max 0
+attr interpolationmode sample-hold
+attr title "queue length, max"
+scalar BGPTestLoopback.R2.eth[0].queue.pauseQueue queueLength:timeavg 0
+attr interpolationmode sample-hold
+attr title "queue length, timeavg"
+scalar BGPTestLoopback.R2.eth[0].queue.pauseQueue packetReceived:count 0
+attr interpolationmode none
+attr title "received packets, count"
+scalar BGPTestLoopback.R2.eth[0].queue.pauseQueue packetReceived:sum(packetBytes) 0
+attr interpolationmode none
+attr title "received packets, sum(packetBytes)"
+scalar BGPTestLoopback.R2.eth[0].queue.pauseQueue dropPk:count 0
+attr interpolationmode none
+attr source packetDropped
+attr title "dropped packets, count"
+scalar BGPTestLoopback.R2.eth[0].queue.pauseQueue dropPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropped
+attr title "dropped packets, sum(packetBytes)"
+statistic BGPTestLoopback.R2.eth[0].queue.dataQueue queueingTime:histogram
+field count 83
+field mean 5.3590361445783e-07
+field stddev 1.4828178811457e-06
+field min 0
+field max 7.84e-06
+field sum 4.448e-05
+field sqrsum 2.041344e-10
+attr interpolationmode none
+attr title "queueing time, histogram"
+bin	-inf	0
+bin	0	70
+bin	2e-07	0
+bin	4e-07	0
+bin	6e-07	0
+bin	8e-07	0
+bin	1e-06	0
+bin	1.2e-06	0
+bin	1.4e-06	1
+bin	1.6e-06	2
+bin	1.8e-06	4
+bin	2e-06	0
+bin	2.2e-06	0
+bin	2.4e-06	0
+bin	2.6e-06	0
+bin	2.8e-06	0
+bin	3e-06	0
+bin	3.2e-06	0
+bin	3.4e-06	0
+bin	3.6e-06	2
+bin	3.8e-06	0
+bin	4e-06	0
+bin	4.2e-06	0
+bin	4.4e-06	1
+bin	4.6e-06	0
+bin	4.8e-06	0
+bin	5e-06	0
+bin	5.2e-06	0
+bin	5.4e-06	0
+bin	5.6e-06	1
+bin	5.8e-06	0
+bin	6e-06	0
+bin	6.2e-06	1
+bin	6.4e-06	0
+bin	6.6e-06	0
+bin	6.8e-06	0
+bin	7e-06	0
+bin	7.2e-06	0
+bin	7.4e-06	0
+bin	7.6e-06	0
+bin	7.8e-06	1
+bin	8e-06	0
+bin	8.2e-06	0
+bin	8.4e-06	0
+bin	8.6e-06	0
+bin	8.8e-06	0
+bin	9e-06	0
+bin	9.2e-06	0
+bin	9.4e-06	0
+bin	9.6e-06	0
+bin	9.8e-06	0
+scalar BGPTestLoopback.R2.eth[0].queue.dataQueue queueLength:max 1
+attr interpolationmode sample-hold
+attr title "queue length, max"
+scalar BGPTestLoopback.R2.eth[0].queue.dataQueue queueLength:timeavg 1.4826666666667e-07
+attr interpolationmode sample-hold
+attr title "queue length, timeavg"
+scalar BGPTestLoopback.R2.eth[0].queue.dataQueue packetReceived:count 83
+attr interpolationmode none
+attr title "received packets, count"
+scalar BGPTestLoopback.R2.eth[0].queue.dataQueue packetReceived:sum(packetBytes) 6903
+attr interpolationmode none
+attr title "received packets, sum(packetBytes)"
+scalar BGPTestLoopback.R2.eth[0].queue.dataQueue dropPk:count 0
+attr interpolationmode none
+attr source packetDropped
+attr title "dropped packets, count"
+scalar BGPTestLoopback.R2.eth[0].queue.dataQueue dropPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropped
+attr title "dropped packets, sum(packetBytes)"
+scalar BGPTestLoopback.R2.eth[0].mac "simulated time" 300
+scalar BGPTestLoopback.R2.eth[0].mac full-duplex 1
+scalar BGPTestLoopback.R2.eth[0].mac "frames/sec sent" 0.16333333333333
+scalar BGPTestLoopback.R2.eth[0].mac "frames/sec rcvd" 0.16333333333333
+scalar BGPTestLoopback.R2.eth[0].mac "bits/sec sent" 109.49333333333
+scalar BGPTestLoopback.R2.eth[0].mac "bits/sec rcvd" 104.21333333333
+scalar BGPTestLoopback.R2.eth[0].mac "rx channel idle (%)" 100
+scalar BGPTestLoopback.R2.eth[0].mac "rx channel utilization (%)" 0
+scalar BGPTestLoopback.R2.eth[0].mac rxPausePkUnits:count 0
+attr interpolationmode none
+attr title "pause units received, count"
+scalar BGPTestLoopback.R2.eth[0].mac rxPausePkUnits:sum 0
+attr interpolationmode none
+attr title "pause units received, sum"
+scalar BGPTestLoopback.R2.eth[0].mac txPausePkUnits:count 0
+attr interpolationmode none
+attr title "pause units sent, count"
+scalar BGPTestLoopback.R2.eth[0].mac txPausePkUnits:sum 0
+attr interpolationmode none
+attr title "pause units sent, sum"
+scalar BGPTestLoopback.R2.eth[0].mac rxPkOk:count 49
+attr interpolationmode none
+attr source rxPkOk
+attr title "packets received OK, count"
+scalar BGPTestLoopback.R2.eth[0].mac rxPkOk:sum(packetBytes) 3908
+attr interpolationmode none
+attr source rxPkOk
+attr title "packets received OK, sum(packetBytes)"
+scalar BGPTestLoopback.R2.eth[0].mac txPk:count 49
+attr interpolationmode none
+attr source packetSentToLower
+attr title "packets transmitted, count"
+scalar BGPTestLoopback.R2.eth[0].mac txPk:sum(packetBytes) 4106
+attr interpolationmode none
+attr source packetSentToLower
+attr title "packets transmitted, sum(packetBytes)"
+scalar BGPTestLoopback.R2.eth[0].mac packetReceivedFromUpper:count 83
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packet bytes from higher layer, count"
+scalar BGPTestLoopback.R2.eth[0].mac packetReceivedFromUpper:sum(packetBytes) 6903
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packet bytes from higher layer, sum(packetBytes)"
+scalar BGPTestLoopback.R2.eth[0].mac passedUpPk:count 49
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, count"
+scalar BGPTestLoopback.R2.eth[0].mac passedUpPk:sum(packetBytes) 3908
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, sum(packetBytes)"
+scalar BGPTestLoopback.R2.eth[0].mac packetDropIncorrectlyReceived:count 0
+attr interpolationmode none
+attr source packetDropReasonIsIncorrectlyReceived(packetDropped)
+attr title "packet drop: incorrectly received, count"
+scalar BGPTestLoopback.R2.eth[0].mac packetDropIncorrectlyReceived:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsIncorrectlyReceived(packetDropped)
+attr title "packet drop: incorrectly received, sum(packetBytes)"
+scalar BGPTestLoopback.R2.eth[0].mac packetDropInterfaceDown:count 34
+attr interpolationmode none
+attr source packetDropReasonIsInterfaceDown(packetDropped)
+attr title "packet drop: interface down, count"
+scalar BGPTestLoopback.R2.eth[0].mac packetDropInterfaceDown:sum(packetBytes) 2797
+attr interpolationmode none
+attr source packetDropReasonIsInterfaceDown(packetDropped)
+attr title "packet drop: interface down, sum(packetBytes)"
+scalar BGPTestLoopback.R2.eth[0].mac packetDropNotAddressedToUs:count 0
+attr interpolationmode none
+attr source packetDropReasonIsNotAddressedToUs(packetDropped)
+attr title "packet drop: not addressed to us, count"
+scalar BGPTestLoopback.R2.eth[0].mac packetDropNotAddressedToUs:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsNotAddressedToUs(packetDropped)
+attr title "packet drop: not addressed to us, sum(packetBytes)"
+scalar BGPTestLoopback.R2.eth[0].encap pauseSent:count 0
+attr title "pause sent, count"
+scalar BGPTestLoopback.R2.eth[0].encap pauseSent:sum 0
+attr title "pause sent, sum"
+scalar BGPTestLoopback.R2.eth[0].encap decapPk:count 49
+attr interpolationmode none
+attr source decapPk
+attr title "packets decapsulated, count"
+scalar BGPTestLoopback.R2.eth[0].encap decapPk:sum(packetBytes) 3026
+attr interpolationmode none
+attr source decapPk
+attr title "packets decapsulated, sum(packetBytes)"
+scalar BGPTestLoopback.R2.eth[0].encap encapPk:count 83
+attr interpolationmode none
+attr source encapPk
+attr title "packets encapsulated, count"
+scalar BGPTestLoopback.R2.eth[0].encap encapPk:sum(packetBytes) 5187
+attr interpolationmode none
+attr source encapPk
+attr title "packets encapsulated, sum(packetBytes)"
+statistic BGPTestLoopback.R2.eth[1].queue.pauseQueue queueingTime:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr title "queueing time, histogram"
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar BGPTestLoopback.R2.eth[1].queue.pauseQueue queueLength:max 0
+attr interpolationmode sample-hold
+attr title "queue length, max"
+scalar BGPTestLoopback.R2.eth[1].queue.pauseQueue queueLength:timeavg 0
+attr interpolationmode sample-hold
+attr title "queue length, timeavg"
+scalar BGPTestLoopback.R2.eth[1].queue.pauseQueue packetReceived:count 0
+attr interpolationmode none
+attr title "received packets, count"
+scalar BGPTestLoopback.R2.eth[1].queue.pauseQueue packetReceived:sum(packetBytes) 0
+attr interpolationmode none
+attr title "received packets, sum(packetBytes)"
+scalar BGPTestLoopback.R2.eth[1].queue.pauseQueue dropPk:count 0
+attr interpolationmode none
+attr source packetDropped
+attr title "dropped packets, count"
+scalar BGPTestLoopback.R2.eth[1].queue.pauseQueue dropPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropped
+attr title "dropped packets, sum(packetBytes)"
+statistic BGPTestLoopback.R2.eth[1].queue.dataQueue queueingTime:histogram
+field count 50
+field mean 5.184e-07
+field stddev 1.3914012317643e-06
+field min 0
+field max 7.76e-06
+field sum 2.592e-05
+field sqrsum 1.083008e-10
+attr interpolationmode none
+attr title "queueing time, histogram"
+bin	-inf	0
+bin	0	41
+bin	2e-07	0
+bin	4e-07	0
+bin	6e-07	0
+bin	8e-07	0
+bin	1e-06	0
+bin	1.2e-06	0
+bin	1.4e-06	0
+bin	1.6e-06	0
+bin	1.8e-06	7
+bin	2e-06	0
+bin	2.2e-06	0
+bin	2.4e-06	0
+bin	2.6e-06	0
+bin	2.8e-06	0
+bin	3e-06	0
+bin	3.2e-06	0
+bin	3.4e-06	0
+bin	3.6e-06	0
+bin	3.8e-06	0
+bin	4e-06	0
+bin	4.2e-06	0
+bin	4.4e-06	0
+bin	4.6e-06	1
+bin	4.8e-06	0
+bin	5e-06	0
+bin	5.2e-06	0
+bin	5.4e-06	0
+bin	5.6e-06	0
+bin	5.8e-06	0
+bin	6e-06	0
+bin	6.2e-06	0
+bin	6.4e-06	0
+bin	6.6e-06	0
+bin	6.8e-06	0
+bin	7e-06	0
+bin	7.2e-06	0
+bin	7.4e-06	0
+bin	7.6e-06	1
+bin	7.8e-06	0
+bin	8e-06	0
+bin	8.2e-06	0
+bin	8.4e-06	0
+bin	8.6e-06	0
+bin	8.8e-06	0
+bin	9e-06	0
+bin	9.2e-06	0
+bin	9.4e-06	0
+bin	9.6e-06	0
+bin	9.8e-06	0
+scalar BGPTestLoopback.R2.eth[1].queue.dataQueue queueLength:max 1
+attr interpolationmode sample-hold
+attr title "queue length, max"
+scalar BGPTestLoopback.R2.eth[1].queue.dataQueue queueLength:timeavg 8.64e-08
+attr interpolationmode sample-hold
+attr title "queue length, timeavg"
+scalar BGPTestLoopback.R2.eth[1].queue.dataQueue packetReceived:count 50
+attr interpolationmode none
+attr title "received packets, count"
+scalar BGPTestLoopback.R2.eth[1].queue.dataQueue packetReceived:sum(packetBytes) 4115
+attr interpolationmode none
+attr title "received packets, sum(packetBytes)"
+scalar BGPTestLoopback.R2.eth[1].queue.dataQueue dropPk:count 0
+attr interpolationmode none
+attr source packetDropped
+attr title "dropped packets, count"
+scalar BGPTestLoopback.R2.eth[1].queue.dataQueue dropPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropped
+attr title "dropped packets, sum(packetBytes)"
+scalar BGPTestLoopback.R2.eth[1].mac "simulated time" 300
+scalar BGPTestLoopback.R2.eth[1].mac full-duplex 1
+scalar BGPTestLoopback.R2.eth[1].mac "frames/sec sent" 0.16666666666667
+scalar BGPTestLoopback.R2.eth[1].mac "frames/sec rcvd" 0.17333333333333
+scalar BGPTestLoopback.R2.eth[1].mac "bits/sec sent" 109.73333333333
+scalar BGPTestLoopback.R2.eth[1].mac "bits/sec rcvd" 110.93333333333
+scalar BGPTestLoopback.R2.eth[1].mac "rx channel idle (%)" 100
+scalar BGPTestLoopback.R2.eth[1].mac "rx channel utilization (%)" 0
+scalar BGPTestLoopback.R2.eth[1].mac rxPausePkUnits:count 0
+attr interpolationmode none
+attr title "pause units received, count"
+scalar BGPTestLoopback.R2.eth[1].mac rxPausePkUnits:sum 0
+attr interpolationmode none
+attr title "pause units received, sum"
+scalar BGPTestLoopback.R2.eth[1].mac txPausePkUnits:count 0
+attr interpolationmode none
+attr title "pause units sent, count"
+scalar BGPTestLoopback.R2.eth[1].mac txPausePkUnits:sum 0
+attr interpolationmode none
+attr title "pause units sent, sum"
+scalar BGPTestLoopback.R2.eth[1].mac rxPkOk:count 52
+attr interpolationmode none
+attr source rxPkOk
+attr title "packets received OK, count"
+scalar BGPTestLoopback.R2.eth[1].mac rxPkOk:sum(packetBytes) 4160
+attr interpolationmode none
+attr source rxPkOk
+attr title "packets received OK, sum(packetBytes)"
+scalar BGPTestLoopback.R2.eth[1].mac txPk:count 50
+attr interpolationmode none
+attr source packetSentToLower
+attr title "packets transmitted, count"
+scalar BGPTestLoopback.R2.eth[1].mac txPk:sum(packetBytes) 4115
+attr interpolationmode none
+attr source packetSentToLower
+attr title "packets transmitted, sum(packetBytes)"
+scalar BGPTestLoopback.R2.eth[1].mac packetReceivedFromUpper:count 50
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packet bytes from higher layer, count"
+scalar BGPTestLoopback.R2.eth[1].mac packetReceivedFromUpper:sum(packetBytes) 4115
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packet bytes from higher layer, sum(packetBytes)"
+scalar BGPTestLoopback.R2.eth[1].mac passedUpPk:count 52
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, count"
+scalar BGPTestLoopback.R2.eth[1].mac passedUpPk:sum(packetBytes) 4160
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, sum(packetBytes)"
+scalar BGPTestLoopback.R2.eth[1].mac packetDropIncorrectlyReceived:count 0
+attr interpolationmode none
+attr source packetDropReasonIsIncorrectlyReceived(packetDropped)
+attr title "packet drop: incorrectly received, count"
+scalar BGPTestLoopback.R2.eth[1].mac packetDropIncorrectlyReceived:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsIncorrectlyReceived(packetDropped)
+attr title "packet drop: incorrectly received, sum(packetBytes)"
+scalar BGPTestLoopback.R2.eth[1].mac packetDropInterfaceDown:count 0
+attr interpolationmode none
+attr source packetDropReasonIsInterfaceDown(packetDropped)
+attr title "packet drop: interface down, count"
+scalar BGPTestLoopback.R2.eth[1].mac packetDropInterfaceDown:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsInterfaceDown(packetDropped)
+attr title "packet drop: interface down, sum(packetBytes)"
+scalar BGPTestLoopback.R2.eth[1].mac packetDropNotAddressedToUs:count 0
+attr interpolationmode none
+attr source packetDropReasonIsNotAddressedToUs(packetDropped)
+attr title "packet drop: not addressed to us, count"
+scalar BGPTestLoopback.R2.eth[1].mac packetDropNotAddressedToUs:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsNotAddressedToUs(packetDropped)
+attr title "packet drop: not addressed to us, sum(packetBytes)"
+scalar BGPTestLoopback.R2.eth[1].encap pauseSent:count 0
+attr title "pause sent, count"
+scalar BGPTestLoopback.R2.eth[1].encap pauseSent:sum 0
+attr title "pause sent, sum"
+scalar BGPTestLoopback.R2.eth[1].encap decapPk:count 52
+attr interpolationmode none
+attr source decapPk
+attr title "packets decapsulated, count"
+scalar BGPTestLoopback.R2.eth[1].encap decapPk:sum(packetBytes) 3224
+attr interpolationmode none
+attr source decapPk
+attr title "packets decapsulated, sum(packetBytes)"
+scalar BGPTestLoopback.R2.eth[1].encap encapPk:count 50
+attr interpolationmode none
+attr source encapPk
+attr title "packets encapsulated, count"
+scalar BGPTestLoopback.R2.eth[1].encap encapPk:sum(packetBytes) 3115
+attr interpolationmode none
+attr source encapPk
+attr title "packets encapsulated, sum(packetBytes)"
+scalar BGPTestLoopback.R2.ipv4.ip packetDropAddressResolutionFailed:count 2
+attr interpolationmode none
+attr source packetDropReasonIsAddressResolutionFailed(packetDropped)
+attr title "packet drop: address resolution failed, count"
+scalar BGPTestLoopback.R2.ipv4.ip packetDropAddressResolutionFailed:sum(packetBytes) 99
+attr interpolationmode none
+attr source packetDropReasonIsAddressResolutionFailed(packetDropped)
+attr title "packet drop: address resolution failed, sum(packetBytes)"
+scalar BGPTestLoopback.R2.ipv4.ip packetDropHopLimitReached:count 0
+attr interpolationmode none
+attr source packetDropReasonIsHopLimitReached(packetDropped)
+attr title "packet drop: hop limit reached, count"
+scalar BGPTestLoopback.R2.ipv4.ip packetDropHopLimitReached:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsHopLimitReached(packetDropped)
+attr title "packet drop: hop limit reached, sum(packetBytes)"
+scalar BGPTestLoopback.R2.ipv4.ip packetDropForwardingDisabled:count 0
+attr interpolationmode none
+attr source packetDropReasonIsForwardingDisabled(packetDropped)
+attr title "packet drop: forwarding disabled, count"
+scalar BGPTestLoopback.R2.ipv4.ip packetDropForwardingDisabled:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsForwardingDisabled(packetDropped)
+attr title "packet drop: forwarding disabled, sum(packetBytes)"
+scalar BGPTestLoopback.R2.ipv4.ip packetDropNoInterfaceFound:count 0
+attr interpolationmode none
+attr source packetDropReasonIsNoInterfaceFound(packetDropped)
+attr title "packet drop: no interface found, count"
+scalar BGPTestLoopback.R2.ipv4.ip packetDropNoInterfaceFound:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsNoInterfaceFound(packetDropped)
+attr title "packet drop: no interface found, sum(packetBytes)"
+scalar BGPTestLoopback.R2.ipv4.ip packetDropNoRouteFound:count 0
+attr interpolationmode none
+attr source packetDropReasonIsNoRouteFound(packetDropped)
+attr title "packet drop: no route found, count"
+scalar BGPTestLoopback.R2.ipv4.ip packetDropNoRouteFound:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsNoRouteFound(packetDropped)
+attr title "packet drop: no route found, sum(packetBytes)"
+scalar BGPTestLoopback.R2.ipv4.ip packetDropUndefined:count 0
+attr interpolationmode none
+attr source packetDropReasonIsUndefined(packetDropped)
+attr title "packet drop: undefined, count"
+scalar BGPTestLoopback.R2.ipv4.ip packetDropUndefined:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsUndefined(packetDropped)
+attr title "packet drop: undefined, sum(packetBytes)"
+scalar BGPTestLoopback.R2.ipv4.arp arpResolutionFailed:count 2
+attr title "ARP failed resolutions, count"
+scalar BGPTestLoopback.R2.ipv4.arp arpResolutionCompleted:count 5
+attr title "ARP completed resolutions, count"
+scalar BGPTestLoopback.R2.ipv4.arp arpResolutionInitiated:count 5
+attr title "ARP initiated resolutions, count"
+scalar BGPTestLoopback.R2.ipv4.arp arpReplySent:count 2
+attr source arpReplySent
+attr title "ARP replies sent, count"
+scalar BGPTestLoopback.R2.ipv4.arp arpReplySent:sum(packetBytes) 56
+attr source arpReplySent
+attr title "ARP replies sent, sum(packetBytes)"
+scalar BGPTestLoopback.R2.ipv4.arp arpRequestSent:count 10
+attr source arpRequestSent
+attr title "ARP request sent, count"
+scalar BGPTestLoopback.R2.ipv4.arp arpRequestSent:sum(packetBytes) 280
+attr source arpRequestSent
+attr title "ARP request sent, sum(packetBytes)"
+scalar BGPTestLoopback.R2.ipv6.neighbourDiscovery startDad:count 2
+attr title "DAD started, count"
+scalar BGPTestLoopback.R2.bgp OPENMsgSent 6
+scalar BGPTestLoopback.R2.bgp OPENMsgRecv 6
+scalar BGPTestLoopback.R2.bgp KeepAliveMsgSent 22
+scalar BGPTestLoopback.R2.bgp KeepAliveMsgRcv 16
+scalar BGPTestLoopback.R2.bgp UpdateMsgSent 20
+scalar BGPTestLoopback.R2.bgp UpdateMsgRcv 8
+scalar BGPTestLoopback.R3.lo[0].lo rcvdPkFromHl:count 0
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, count"
+scalar BGPTestLoopback.R3.lo[0].lo rcvdPkFromHl:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, sum(packetBytes)"
+scalar BGPTestLoopback.R3.lo[0].lo passedUpPk:count 0
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, count"
+scalar BGPTestLoopback.R3.lo[0].lo passedUpPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, sum(packetBytes)"
+statistic BGPTestLoopback.R3.eth[0].queue.pauseQueue queueingTime:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr title "queueing time, histogram"
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar BGPTestLoopback.R3.eth[0].queue.pauseQueue queueLength:max 0
+attr interpolationmode sample-hold
+attr title "queue length, max"
+scalar BGPTestLoopback.R3.eth[0].queue.pauseQueue queueLength:timeavg 0
+attr interpolationmode sample-hold
+attr title "queue length, timeavg"
+scalar BGPTestLoopback.R3.eth[0].queue.pauseQueue packetReceived:count 0
+attr interpolationmode none
+attr title "received packets, count"
+scalar BGPTestLoopback.R3.eth[0].queue.pauseQueue packetReceived:sum(packetBytes) 0
+attr interpolationmode none
+attr title "received packets, sum(packetBytes)"
+scalar BGPTestLoopback.R3.eth[0].queue.pauseQueue dropPk:count 0
+attr interpolationmode none
+attr source packetDropped
+attr title "dropped packets, count"
+scalar BGPTestLoopback.R3.eth[0].queue.pauseQueue dropPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropped
+attr title "dropped packets, sum(packetBytes)"
+statistic BGPTestLoopback.R3.eth[0].queue.dataQueue queueingTime:histogram
+field count 56
+field mean 5.3571428571429e-07
+field stddev 1.352657797406e-06
+field min 0
+field max 7.76e-06
+field sum 3e-05
+field sqrsum 1.16704e-10
+attr interpolationmode none
+attr title "queueing time, histogram"
+bin	-inf	0
+bin	0	45
+bin	2e-07	0
+bin	4e-07	0
+bin	6e-07	0
+bin	8e-07	0
+bin	1e-06	0
+bin	1.2e-06	0
+bin	1.4e-06	0
+bin	1.6e-06	0
+bin	1.8e-06	8
+bin	2e-06	0
+bin	2.2e-06	1
+bin	2.4e-06	0
+bin	2.6e-06	0
+bin	2.8e-06	0
+bin	3e-06	0
+bin	3.2e-06	0
+bin	3.4e-06	0
+bin	3.6e-06	0
+bin	3.8e-06	0
+bin	4e-06	0
+bin	4.2e-06	0
+bin	4.4e-06	0
+bin	4.6e-06	1
+bin	4.8e-06	0
+bin	5e-06	0
+bin	5.2e-06	0
+bin	5.4e-06	0
+bin	5.6e-06	0
+bin	5.8e-06	0
+bin	6e-06	0
+bin	6.2e-06	0
+bin	6.4e-06	0
+bin	6.6e-06	0
+bin	6.8e-06	0
+bin	7e-06	0
+bin	7.2e-06	0
+bin	7.4e-06	0
+bin	7.6e-06	1
+bin	7.8e-06	0
+bin	8e-06	0
+bin	8.2e-06	0
+bin	8.4e-06	0
+bin	8.6e-06	0
+bin	8.8e-06	0
+bin	9e-06	0
+bin	9.2e-06	0
+bin	9.4e-06	0
+bin	9.6e-06	0
+bin	9.8e-06	0
+scalar BGPTestLoopback.R3.eth[0].queue.dataQueue queueLength:max 1
+attr interpolationmode sample-hold
+attr title "queue length, max"
+scalar BGPTestLoopback.R3.eth[0].queue.dataQueue queueLength:timeavg 1e-07
+attr interpolationmode sample-hold
+attr title "queue length, timeavg"
+scalar BGPTestLoopback.R3.eth[0].queue.dataQueue packetReceived:count 56
+attr interpolationmode none
+attr title "received packets, count"
+scalar BGPTestLoopback.R3.eth[0].queue.dataQueue packetReceived:sum(packetBytes) 4566
+attr interpolationmode none
+attr title "received packets, sum(packetBytes)"
+scalar BGPTestLoopback.R3.eth[0].queue.dataQueue dropPk:count 0
+attr interpolationmode none
+attr source packetDropped
+attr title "dropped packets, count"
+scalar BGPTestLoopback.R3.eth[0].queue.dataQueue dropPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropped
+attr title "dropped packets, sum(packetBytes)"
+scalar BGPTestLoopback.R3.eth[0].mac "simulated time" 300
+scalar BGPTestLoopback.R3.eth[0].mac full-duplex 1
+scalar BGPTestLoopback.R3.eth[0].mac "frames/sec sent" 0.18666666666667
+scalar BGPTestLoopback.R3.eth[0].mac "frames/sec rcvd" 0.18
+scalar BGPTestLoopback.R3.eth[0].mac "bits/sec sent" 121.76
+scalar BGPTestLoopback.R3.eth[0].mac "bits/sec rcvd" 113.36
+scalar BGPTestLoopback.R3.eth[0].mac "rx channel idle (%)" 100
+scalar BGPTestLoopback.R3.eth[0].mac "rx channel utilization (%)" 0
+scalar BGPTestLoopback.R3.eth[0].mac rxPausePkUnits:count 0
+attr interpolationmode none
+attr title "pause units received, count"
+scalar BGPTestLoopback.R3.eth[0].mac rxPausePkUnits:sum 0
+attr interpolationmode none
+attr title "pause units received, sum"
+scalar BGPTestLoopback.R3.eth[0].mac txPausePkUnits:count 0
+attr interpolationmode none
+attr title "pause units sent, count"
+scalar BGPTestLoopback.R3.eth[0].mac txPausePkUnits:sum 0
+attr interpolationmode none
+attr title "pause units sent, sum"
+scalar BGPTestLoopback.R3.eth[0].mac rxPkOk:count 54
+attr interpolationmode none
+attr source rxPkOk
+attr title "packets received OK, count"
+scalar BGPTestLoopback.R3.eth[0].mac rxPkOk:sum(packetBytes) 4251
+attr interpolationmode none
+attr source rxPkOk
+attr title "packets received OK, sum(packetBytes)"
+scalar BGPTestLoopback.R3.eth[0].mac txPk:count 56
+attr interpolationmode none
+attr source packetSentToLower
+attr title "packets transmitted, count"
+scalar BGPTestLoopback.R3.eth[0].mac txPk:sum(packetBytes) 4566
+attr interpolationmode none
+attr source packetSentToLower
+attr title "packets transmitted, sum(packetBytes)"
+scalar BGPTestLoopback.R3.eth[0].mac packetReceivedFromUpper:count 56
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packet bytes from higher layer, count"
+scalar BGPTestLoopback.R3.eth[0].mac packetReceivedFromUpper:sum(packetBytes) 4566
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packet bytes from higher layer, sum(packetBytes)"
+scalar BGPTestLoopback.R3.eth[0].mac passedUpPk:count 54
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, count"
+scalar BGPTestLoopback.R3.eth[0].mac passedUpPk:sum(packetBytes) 4251
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, sum(packetBytes)"
+scalar BGPTestLoopback.R3.eth[0].mac packetDropIncorrectlyReceived:count 0
+attr interpolationmode none
+attr source packetDropReasonIsIncorrectlyReceived(packetDropped)
+attr title "packet drop: incorrectly received, count"
+scalar BGPTestLoopback.R3.eth[0].mac packetDropIncorrectlyReceived:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsIncorrectlyReceived(packetDropped)
+attr title "packet drop: incorrectly received, sum(packetBytes)"
+scalar BGPTestLoopback.R3.eth[0].mac packetDropInterfaceDown:count 0
+attr interpolationmode none
+attr source packetDropReasonIsInterfaceDown(packetDropped)
+attr title "packet drop: interface down, count"
+scalar BGPTestLoopback.R3.eth[0].mac packetDropInterfaceDown:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsInterfaceDown(packetDropped)
+attr title "packet drop: interface down, sum(packetBytes)"
+scalar BGPTestLoopback.R3.eth[0].mac packetDropNotAddressedToUs:count 0
+attr interpolationmode none
+attr source packetDropReasonIsNotAddressedToUs(packetDropped)
+attr title "packet drop: not addressed to us, count"
+scalar BGPTestLoopback.R3.eth[0].mac packetDropNotAddressedToUs:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsNotAddressedToUs(packetDropped)
+attr title "packet drop: not addressed to us, sum(packetBytes)"
+scalar BGPTestLoopback.R3.eth[0].encap pauseSent:count 0
+attr title "pause sent, count"
+scalar BGPTestLoopback.R3.eth[0].encap pauseSent:sum 0
+attr title "pause sent, sum"
+scalar BGPTestLoopback.R3.eth[0].encap decapPk:count 54
+attr interpolationmode none
+attr source decapPk
+attr title "packets decapsulated, count"
+scalar BGPTestLoopback.R3.eth[0].encap decapPk:sum(packetBytes) 3279
+attr interpolationmode none
+attr source decapPk
+attr title "packets decapsulated, sum(packetBytes)"
+scalar BGPTestLoopback.R3.eth[0].encap encapPk:count 56
+attr interpolationmode none
+attr source encapPk
+attr title "packets encapsulated, count"
+scalar BGPTestLoopback.R3.eth[0].encap encapPk:sum(packetBytes) 3458
+attr interpolationmode none
+attr source encapPk
+attr title "packets encapsulated, sum(packetBytes)"
+statistic BGPTestLoopback.R3.eth[1].queue.pauseQueue queueingTime:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr title "queueing time, histogram"
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar BGPTestLoopback.R3.eth[1].queue.pauseQueue queueLength:max 0
+attr interpolationmode sample-hold
+attr title "queue length, max"
+scalar BGPTestLoopback.R3.eth[1].queue.pauseQueue queueLength:timeavg 0
+attr interpolationmode sample-hold
+attr title "queue length, timeavg"
+scalar BGPTestLoopback.R3.eth[1].queue.pauseQueue packetReceived:count 0
+attr interpolationmode none
+attr title "received packets, count"
+scalar BGPTestLoopback.R3.eth[1].queue.pauseQueue packetReceived:sum(packetBytes) 0
+attr interpolationmode none
+attr title "received packets, sum(packetBytes)"
+scalar BGPTestLoopback.R3.eth[1].queue.pauseQueue dropPk:count 0
+attr interpolationmode none
+attr source packetDropped
+attr title "dropped packets, count"
+scalar BGPTestLoopback.R3.eth[1].queue.pauseQueue dropPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropped
+attr title "dropped packets, sum(packetBytes)"
+statistic BGPTestLoopback.R3.eth[1].queue.dataQueue queueingTime:histogram
+field count 52
+field mean 9.3923076923077e-07
+field stddev 2.2712593432994e-06
+field min 0
+field max 9.76e-06
+field sum 4.884e-05
+field sqrsum 3.089616e-10
+attr interpolationmode none
+attr title "queueing time, histogram"
+bin	-inf	0
+bin	0	41
+bin	2e-07	0
+bin	4e-07	0
+bin	6e-07	0
+bin	8e-07	0
+bin	1e-06	0
+bin	1.2e-06	0
+bin	1.4e-06	0
+bin	1.6e-06	0
+bin	1.8e-06	6
+bin	2e-06	0
+bin	2.2e-06	0
+bin	2.4e-06	0
+bin	2.6e-06	0
+bin	2.8e-06	0
+bin	3e-06	0
+bin	3.2e-06	0
+bin	3.4e-06	0
+bin	3.6e-06	0
+bin	3.8e-06	0
+bin	4e-06	0
+bin	4.2e-06	0
+bin	4.4e-06	0
+bin	4.6e-06	0
+bin	4.8e-06	0
+bin	5e-06	0
+bin	5.2e-06	0
+bin	5.4e-06	0
+bin	5.6e-06	1
+bin	5.8e-06	0
+bin	6e-06	0
+bin	6.2e-06	0
+bin	6.4e-06	0
+bin	6.6e-06	1
+bin	6.8e-06	0
+bin	7e-06	0
+bin	7.2e-06	1
+bin	7.4e-06	0
+bin	7.6e-06	0
+bin	7.8e-06	1
+bin	8e-06	0
+bin	8.2e-06	0
+bin	8.4e-06	0
+bin	8.6e-06	0
+bin	8.8e-06	0
+bin	9e-06	0
+bin	9.2e-06	0
+bin	9.4e-06	0
+bin	9.6e-06	1
+bin	9.8e-06	0
+bin	1e-05	0
+bin	1.02e-05	0
+bin	1.04e-05	0
+bin	1.06e-05	0
+bin	1.08e-05	0
+bin	1.1e-05	0
+bin	1.12e-05	0
+bin	1.14e-05	0
+bin	1.16e-05	0
+bin	1.18e-05	0
+bin	1.2e-05	0
+bin	1.22e-05	0
+scalar BGPTestLoopback.R3.eth[1].queue.dataQueue queueLength:max 2
+attr interpolationmode sample-hold
+attr title "queue length, max"
+scalar BGPTestLoopback.R3.eth[1].queue.dataQueue queueLength:timeavg 1.628e-07
+attr interpolationmode sample-hold
+attr title "queue length, timeavg"
+scalar BGPTestLoopback.R3.eth[1].queue.dataQueue packetReceived:count 52
+attr interpolationmode none
+attr title "received packets, count"
+scalar BGPTestLoopback.R3.eth[1].queue.dataQueue packetReceived:sum(packetBytes) 4160
+attr interpolationmode none
+attr title "received packets, sum(packetBytes)"
+scalar BGPTestLoopback.R3.eth[1].queue.dataQueue dropPk:count 0
+attr interpolationmode none
+attr source packetDropped
+attr title "dropped packets, count"
+scalar BGPTestLoopback.R3.eth[1].queue.dataQueue dropPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropped
+attr title "dropped packets, sum(packetBytes)"
+scalar BGPTestLoopback.R3.eth[1].mac "simulated time" 300
+scalar BGPTestLoopback.R3.eth[1].mac full-duplex 1
+scalar BGPTestLoopback.R3.eth[1].mac "frames/sec sent" 0.17333333333333
+scalar BGPTestLoopback.R3.eth[1].mac "frames/sec rcvd" 0.16666666666667
+scalar BGPTestLoopback.R3.eth[1].mac "bits/sec sent" 110.93333333333
+scalar BGPTestLoopback.R3.eth[1].mac "bits/sec rcvd" 109.73333333333
+scalar BGPTestLoopback.R3.eth[1].mac "rx channel idle (%)" 100
+scalar BGPTestLoopback.R3.eth[1].mac "rx channel utilization (%)" 0
+scalar BGPTestLoopback.R3.eth[1].mac rxPausePkUnits:count 0
+attr interpolationmode none
+attr title "pause units received, count"
+scalar BGPTestLoopback.R3.eth[1].mac rxPausePkUnits:sum 0
+attr interpolationmode none
+attr title "pause units received, sum"
+scalar BGPTestLoopback.R3.eth[1].mac txPausePkUnits:count 0
+attr interpolationmode none
+attr title "pause units sent, count"
+scalar BGPTestLoopback.R3.eth[1].mac txPausePkUnits:sum 0
+attr interpolationmode none
+attr title "pause units sent, sum"
+scalar BGPTestLoopback.R3.eth[1].mac rxPkOk:count 50
+attr interpolationmode none
+attr source rxPkOk
+attr title "packets received OK, count"
+scalar BGPTestLoopback.R3.eth[1].mac rxPkOk:sum(packetBytes) 4115
+attr interpolationmode none
+attr source rxPkOk
+attr title "packets received OK, sum(packetBytes)"
+scalar BGPTestLoopback.R3.eth[1].mac txPk:count 52
+attr interpolationmode none
+attr source packetSentToLower
+attr title "packets transmitted, count"
+scalar BGPTestLoopback.R3.eth[1].mac txPk:sum(packetBytes) 4160
+attr interpolationmode none
+attr source packetSentToLower
+attr title "packets transmitted, sum(packetBytes)"
+scalar BGPTestLoopback.R3.eth[1].mac packetReceivedFromUpper:count 52
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packet bytes from higher layer, count"
+scalar BGPTestLoopback.R3.eth[1].mac packetReceivedFromUpper:sum(packetBytes) 4160
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packet bytes from higher layer, sum(packetBytes)"
+scalar BGPTestLoopback.R3.eth[1].mac passedUpPk:count 50
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, count"
+scalar BGPTestLoopback.R3.eth[1].mac passedUpPk:sum(packetBytes) 4115
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, sum(packetBytes)"
+scalar BGPTestLoopback.R3.eth[1].mac packetDropIncorrectlyReceived:count 0
+attr interpolationmode none
+attr source packetDropReasonIsIncorrectlyReceived(packetDropped)
+attr title "packet drop: incorrectly received, count"
+scalar BGPTestLoopback.R3.eth[1].mac packetDropIncorrectlyReceived:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsIncorrectlyReceived(packetDropped)
+attr title "packet drop: incorrectly received, sum(packetBytes)"
+scalar BGPTestLoopback.R3.eth[1].mac packetDropInterfaceDown:count 0
+attr interpolationmode none
+attr source packetDropReasonIsInterfaceDown(packetDropped)
+attr title "packet drop: interface down, count"
+scalar BGPTestLoopback.R3.eth[1].mac packetDropInterfaceDown:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsInterfaceDown(packetDropped)
+attr title "packet drop: interface down, sum(packetBytes)"
+scalar BGPTestLoopback.R3.eth[1].mac packetDropNotAddressedToUs:count 0
+attr interpolationmode none
+attr source packetDropReasonIsNotAddressedToUs(packetDropped)
+attr title "packet drop: not addressed to us, count"
+scalar BGPTestLoopback.R3.eth[1].mac packetDropNotAddressedToUs:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsNotAddressedToUs(packetDropped)
+attr title "packet drop: not addressed to us, sum(packetBytes)"
+scalar BGPTestLoopback.R3.eth[1].encap pauseSent:count 0
+attr title "pause sent, count"
+scalar BGPTestLoopback.R3.eth[1].encap pauseSent:sum 0
+attr title "pause sent, sum"
+scalar BGPTestLoopback.R3.eth[1].encap decapPk:count 50
+attr interpolationmode none
+attr source decapPk
+attr title "packets decapsulated, count"
+scalar BGPTestLoopback.R3.eth[1].encap decapPk:sum(packetBytes) 3215
+attr interpolationmode none
+attr source decapPk
+attr title "packets decapsulated, sum(packetBytes)"
+scalar BGPTestLoopback.R3.eth[1].encap encapPk:count 52
+attr interpolationmode none
+attr source encapPk
+attr title "packets encapsulated, count"
+scalar BGPTestLoopback.R3.eth[1].encap encapPk:sum(packetBytes) 3102
+attr interpolationmode none
+attr source encapPk
+attr title "packets encapsulated, sum(packetBytes)"
+scalar BGPTestLoopback.R3.ipv4.ip packetDropAddressResolutionFailed:count 0
+attr interpolationmode none
+attr source packetDropReasonIsAddressResolutionFailed(packetDropped)
+attr title "packet drop: address resolution failed, count"
+scalar BGPTestLoopback.R3.ipv4.ip packetDropAddressResolutionFailed:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsAddressResolutionFailed(packetDropped)
+attr title "packet drop: address resolution failed, sum(packetBytes)"
+scalar BGPTestLoopback.R3.ipv4.ip packetDropHopLimitReached:count 0
+attr interpolationmode none
+attr source packetDropReasonIsHopLimitReached(packetDropped)
+attr title "packet drop: hop limit reached, count"
+scalar BGPTestLoopback.R3.ipv4.ip packetDropHopLimitReached:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsHopLimitReached(packetDropped)
+attr title "packet drop: hop limit reached, sum(packetBytes)"
+scalar BGPTestLoopback.R3.ipv4.ip packetDropForwardingDisabled:count 0
+attr interpolationmode none
+attr source packetDropReasonIsForwardingDisabled(packetDropped)
+attr title "packet drop: forwarding disabled, count"
+scalar BGPTestLoopback.R3.ipv4.ip packetDropForwardingDisabled:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsForwardingDisabled(packetDropped)
+attr title "packet drop: forwarding disabled, sum(packetBytes)"
+scalar BGPTestLoopback.R3.ipv4.ip packetDropNoInterfaceFound:count 0
+attr interpolationmode none
+attr source packetDropReasonIsNoInterfaceFound(packetDropped)
+attr title "packet drop: no interface found, count"
+scalar BGPTestLoopback.R3.ipv4.ip packetDropNoInterfaceFound:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsNoInterfaceFound(packetDropped)
+attr title "packet drop: no interface found, sum(packetBytes)"
+scalar BGPTestLoopback.R3.ipv4.ip packetDropNoRouteFound:count 0
+attr interpolationmode none
+attr source packetDropReasonIsNoRouteFound(packetDropped)
+attr title "packet drop: no route found, count"
+scalar BGPTestLoopback.R3.ipv4.ip packetDropNoRouteFound:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsNoRouteFound(packetDropped)
+attr title "packet drop: no route found, sum(packetBytes)"
+scalar BGPTestLoopback.R3.ipv4.ip packetDropUndefined:count 0
+attr interpolationmode none
+attr source packetDropReasonIsUndefined(packetDropped)
+attr title "packet drop: undefined, count"
+scalar BGPTestLoopback.R3.ipv4.ip packetDropUndefined:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsUndefined(packetDropped)
+attr title "packet drop: undefined, sum(packetBytes)"
+scalar BGPTestLoopback.R3.ipv4.arp arpResolutionFailed:count 0
+attr title "ARP failed resolutions, count"
+scalar BGPTestLoopback.R3.ipv4.arp arpResolutionCompleted:count 6
+attr title "ARP completed resolutions, count"
+scalar BGPTestLoopback.R3.ipv4.arp arpResolutionInitiated:count 3
+attr title "ARP initiated resolutions, count"
+scalar BGPTestLoopback.R3.ipv4.arp arpReplySent:count 3
+attr source arpReplySent
+attr title "ARP replies sent, count"
+scalar BGPTestLoopback.R3.ipv4.arp arpReplySent:sum(packetBytes) 84
+attr source arpReplySent
+attr title "ARP replies sent, sum(packetBytes)"
+scalar BGPTestLoopback.R3.ipv4.arp arpRequestSent:count 3
+attr source arpRequestSent
+attr title "ARP request sent, count"
+scalar BGPTestLoopback.R3.ipv4.arp arpRequestSent:sum(packetBytes) 84
+attr source arpRequestSent
+attr title "ARP request sent, sum(packetBytes)"
+scalar BGPTestLoopback.R3.ipv6.neighbourDiscovery startDad:count 2
+attr title "DAD started, count"
+scalar BGPTestLoopback.R3.bgp OPENMsgSent 4
+scalar BGPTestLoopback.R3.bgp OPENMsgRecv 4
+scalar BGPTestLoopback.R3.bgp KeepAliveMsgSent 20
+scalar BGPTestLoopback.R3.bgp KeepAliveMsgRcv 20
+scalar BGPTestLoopback.R3.bgp UpdateMsgSent 14
+scalar BGPTestLoopback.R3.bgp UpdateMsgRcv 10
+scalar BGPTestLoopback.R4.lo[0].lo rcvdPkFromHl:count 0
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, count"
+scalar BGPTestLoopback.R4.lo[0].lo rcvdPkFromHl:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, sum(packetBytes)"
+scalar BGPTestLoopback.R4.lo[0].lo passedUpPk:count 0
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, count"
+scalar BGPTestLoopback.R4.lo[0].lo passedUpPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, sum(packetBytes)"
+statistic BGPTestLoopback.R4.eth[0].queue.pauseQueue queueingTime:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr title "queueing time, histogram"
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar BGPTestLoopback.R4.eth[0].queue.pauseQueue queueLength:max 0
+attr interpolationmode sample-hold
+attr title "queue length, max"
+scalar BGPTestLoopback.R4.eth[0].queue.pauseQueue queueLength:timeavg 0
+attr interpolationmode sample-hold
+attr title "queue length, timeavg"
+scalar BGPTestLoopback.R4.eth[0].queue.pauseQueue packetReceived:count 0
+attr interpolationmode none
+attr title "received packets, count"
+scalar BGPTestLoopback.R4.eth[0].queue.pauseQueue packetReceived:sum(packetBytes) 0
+attr interpolationmode none
+attr title "received packets, sum(packetBytes)"
+scalar BGPTestLoopback.R4.eth[0].queue.pauseQueue dropPk:count 0
+attr interpolationmode none
+attr source packetDropped
+attr title "dropped packets, count"
+scalar BGPTestLoopback.R4.eth[0].queue.pauseQueue dropPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropped
+attr title "dropped packets, sum(packetBytes)"
+statistic BGPTestLoopback.R4.eth[0].queue.dataQueue queueingTime:histogram
+field count 54
+field mean 8.7037037037037e-07
+field stddev 2.2334261378133e-06
+field min 0
+field max 9.76e-06
+field sum 4.7e-05
+field sqrsum 3.052816e-10
+attr interpolationmode none
+attr title "queueing time, histogram"
+bin	-inf	0
+bin	0	44
+bin	2e-07	0
+bin	4e-07	0
+bin	6e-07	0
+bin	8e-07	0
+bin	1e-06	0
+bin	1.2e-06	0
+bin	1.4e-06	0
+bin	1.6e-06	0
+bin	1.8e-06	5
+bin	2e-06	0
+bin	2.2e-06	0
+bin	2.4e-06	0
+bin	2.6e-06	0
+bin	2.8e-06	0
+bin	3e-06	0
+bin	3.2e-06	0
+bin	3.4e-06	0
+bin	3.6e-06	0
+bin	3.8e-06	0
+bin	4e-06	0
+bin	4.2e-06	0
+bin	4.4e-06	0
+bin	4.6e-06	0
+bin	4.8e-06	0
+bin	5e-06	0
+bin	5.2e-06	0
+bin	5.4e-06	0
+bin	5.6e-06	1
+bin	5.8e-06	0
+bin	6e-06	0
+bin	6.2e-06	0
+bin	6.4e-06	0
+bin	6.6e-06	1
+bin	6.8e-06	0
+bin	7e-06	0
+bin	7.2e-06	1
+bin	7.4e-06	0
+bin	7.6e-06	0
+bin	7.8e-06	1
+bin	8e-06	0
+bin	8.2e-06	0
+bin	8.4e-06	0
+bin	8.6e-06	0
+bin	8.8e-06	0
+bin	9e-06	0
+bin	9.2e-06	0
+bin	9.4e-06	0
+bin	9.6e-06	1
+bin	9.8e-06	0
+bin	1e-05	0
+bin	1.02e-05	0
+bin	1.04e-05	0
+bin	1.06e-05	0
+bin	1.08e-05	0
+bin	1.1e-05	0
+bin	1.12e-05	0
+bin	1.14e-05	0
+bin	1.16e-05	0
+bin	1.18e-05	0
+bin	1.2e-05	0
+bin	1.22e-05	0
+scalar BGPTestLoopback.R4.eth[0].queue.dataQueue queueLength:max 2
+attr interpolationmode sample-hold
+attr title "queue length, max"
+scalar BGPTestLoopback.R4.eth[0].queue.dataQueue queueLength:timeavg 1.5666666666667e-07
+attr interpolationmode sample-hold
+attr title "queue length, timeavg"
+scalar BGPTestLoopback.R4.eth[0].queue.dataQueue packetReceived:count 54
+attr interpolationmode none
+attr title "received packets, count"
+scalar BGPTestLoopback.R4.eth[0].queue.dataQueue packetReceived:sum(packetBytes) 4251
+attr interpolationmode none
+attr title "received packets, sum(packetBytes)"
+scalar BGPTestLoopback.R4.eth[0].queue.dataQueue dropPk:count 0
+attr interpolationmode none
+attr source packetDropped
+attr title "dropped packets, count"
+scalar BGPTestLoopback.R4.eth[0].queue.dataQueue dropPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropped
+attr title "dropped packets, sum(packetBytes)"
+scalar BGPTestLoopback.R4.eth[0].mac "simulated time" 300
+scalar BGPTestLoopback.R4.eth[0].mac full-duplex 1
+scalar BGPTestLoopback.R4.eth[0].mac "frames/sec sent" 0.18
+scalar BGPTestLoopback.R4.eth[0].mac "frames/sec rcvd" 0.18666666666667
+scalar BGPTestLoopback.R4.eth[0].mac "bits/sec sent" 113.36
+scalar BGPTestLoopback.R4.eth[0].mac "bits/sec rcvd" 121.76
+scalar BGPTestLoopback.R4.eth[0].mac "rx channel idle (%)" 100
+scalar BGPTestLoopback.R4.eth[0].mac "rx channel utilization (%)" 0
+scalar BGPTestLoopback.R4.eth[0].mac rxPausePkUnits:count 0
+attr interpolationmode none
+attr title "pause units received, count"
+scalar BGPTestLoopback.R4.eth[0].mac rxPausePkUnits:sum 0
+attr interpolationmode none
+attr title "pause units received, sum"
+scalar BGPTestLoopback.R4.eth[0].mac txPausePkUnits:count 0
+attr interpolationmode none
+attr title "pause units sent, count"
+scalar BGPTestLoopback.R4.eth[0].mac txPausePkUnits:sum 0
+attr interpolationmode none
+attr title "pause units sent, sum"
+scalar BGPTestLoopback.R4.eth[0].mac rxPkOk:count 56
+attr interpolationmode none
+attr source rxPkOk
+attr title "packets received OK, count"
+scalar BGPTestLoopback.R4.eth[0].mac rxPkOk:sum(packetBytes) 4566
+attr interpolationmode none
+attr source rxPkOk
+attr title "packets received OK, sum(packetBytes)"
+scalar BGPTestLoopback.R4.eth[0].mac txPk:count 54
+attr interpolationmode none
+attr source packetSentToLower
+attr title "packets transmitted, count"
+scalar BGPTestLoopback.R4.eth[0].mac txPk:sum(packetBytes) 4251
+attr interpolationmode none
+attr source packetSentToLower
+attr title "packets transmitted, sum(packetBytes)"
+scalar BGPTestLoopback.R4.eth[0].mac packetReceivedFromUpper:count 54
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packet bytes from higher layer, count"
+scalar BGPTestLoopback.R4.eth[0].mac packetReceivedFromUpper:sum(packetBytes) 4251
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packet bytes from higher layer, sum(packetBytes)"
+scalar BGPTestLoopback.R4.eth[0].mac passedUpPk:count 56
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, count"
+scalar BGPTestLoopback.R4.eth[0].mac passedUpPk:sum(packetBytes) 4566
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, sum(packetBytes)"
+scalar BGPTestLoopback.R4.eth[0].mac packetDropIncorrectlyReceived:count 0
+attr interpolationmode none
+attr source packetDropReasonIsIncorrectlyReceived(packetDropped)
+attr title "packet drop: incorrectly received, count"
+scalar BGPTestLoopback.R4.eth[0].mac packetDropIncorrectlyReceived:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsIncorrectlyReceived(packetDropped)
+attr title "packet drop: incorrectly received, sum(packetBytes)"
+scalar BGPTestLoopback.R4.eth[0].mac packetDropInterfaceDown:count 0
+attr interpolationmode none
+attr source packetDropReasonIsInterfaceDown(packetDropped)
+attr title "packet drop: interface down, count"
+scalar BGPTestLoopback.R4.eth[0].mac packetDropInterfaceDown:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsInterfaceDown(packetDropped)
+attr title "packet drop: interface down, sum(packetBytes)"
+scalar BGPTestLoopback.R4.eth[0].mac packetDropNotAddressedToUs:count 0
+attr interpolationmode none
+attr source packetDropReasonIsNotAddressedToUs(packetDropped)
+attr title "packet drop: not addressed to us, count"
+scalar BGPTestLoopback.R4.eth[0].mac packetDropNotAddressedToUs:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsNotAddressedToUs(packetDropped)
+attr title "packet drop: not addressed to us, sum(packetBytes)"
+scalar BGPTestLoopback.R4.eth[0].encap pauseSent:count 0
+attr title "pause sent, count"
+scalar BGPTestLoopback.R4.eth[0].encap pauseSent:sum 0
+attr title "pause sent, sum"
+scalar BGPTestLoopback.R4.eth[0].encap decapPk:count 56
+attr interpolationmode none
+attr source decapPk
+attr title "packets decapsulated, count"
+scalar BGPTestLoopback.R4.eth[0].encap decapPk:sum(packetBytes) 3558
+attr interpolationmode none
+attr source decapPk
+attr title "packets decapsulated, sum(packetBytes)"
+scalar BGPTestLoopback.R4.eth[0].encap encapPk:count 54
+attr interpolationmode none
+attr source encapPk
+attr title "packets encapsulated, count"
+scalar BGPTestLoopback.R4.eth[0].encap encapPk:sum(packetBytes) 3151
+attr interpolationmode none
+attr source encapPk
+attr title "packets encapsulated, sum(packetBytes)"
+scalar BGPTestLoopback.R4.ipv4.ip packetDropAddressResolutionFailed:count 0
+attr interpolationmode none
+attr source packetDropReasonIsAddressResolutionFailed(packetDropped)
+attr title "packet drop: address resolution failed, count"
+scalar BGPTestLoopback.R4.ipv4.ip packetDropAddressResolutionFailed:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsAddressResolutionFailed(packetDropped)
+attr title "packet drop: address resolution failed, sum(packetBytes)"
+scalar BGPTestLoopback.R4.ipv4.ip packetDropHopLimitReached:count 0
+attr interpolationmode none
+attr source packetDropReasonIsHopLimitReached(packetDropped)
+attr title "packet drop: hop limit reached, count"
+scalar BGPTestLoopback.R4.ipv4.ip packetDropHopLimitReached:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsHopLimitReached(packetDropped)
+attr title "packet drop: hop limit reached, sum(packetBytes)"
+scalar BGPTestLoopback.R4.ipv4.ip packetDropForwardingDisabled:count 0
+attr interpolationmode none
+attr source packetDropReasonIsForwardingDisabled(packetDropped)
+attr title "packet drop: forwarding disabled, count"
+scalar BGPTestLoopback.R4.ipv4.ip packetDropForwardingDisabled:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsForwardingDisabled(packetDropped)
+attr title "packet drop: forwarding disabled, sum(packetBytes)"
+scalar BGPTestLoopback.R4.ipv4.ip packetDropNoInterfaceFound:count 0
+attr interpolationmode none
+attr source packetDropReasonIsNoInterfaceFound(packetDropped)
+attr title "packet drop: no interface found, count"
+scalar BGPTestLoopback.R4.ipv4.ip packetDropNoInterfaceFound:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsNoInterfaceFound(packetDropped)
+attr title "packet drop: no interface found, sum(packetBytes)"
+scalar BGPTestLoopback.R4.ipv4.ip packetDropNoRouteFound:count 0
+attr interpolationmode none
+attr source packetDropReasonIsNoRouteFound(packetDropped)
+attr title "packet drop: no route found, count"
+scalar BGPTestLoopback.R4.ipv4.ip packetDropNoRouteFound:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsNoRouteFound(packetDropped)
+attr title "packet drop: no route found, sum(packetBytes)"
+scalar BGPTestLoopback.R4.ipv4.ip packetDropUndefined:count 0
+attr interpolationmode none
+attr source packetDropReasonIsUndefined(packetDropped)
+attr title "packet drop: undefined, count"
+scalar BGPTestLoopback.R4.ipv4.ip packetDropUndefined:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsUndefined(packetDropped)
+attr title "packet drop: undefined, sum(packetBytes)"
+scalar BGPTestLoopback.R4.ipv4.arp arpResolutionFailed:count 0
+attr title "ARP failed resolutions, count"
+scalar BGPTestLoopback.R4.ipv4.arp arpResolutionCompleted:count 3
+attr title "ARP completed resolutions, count"
+scalar BGPTestLoopback.R4.ipv4.arp arpResolutionInitiated:count 1
+attr title "ARP initiated resolutions, count"
+scalar BGPTestLoopback.R4.ipv4.arp arpReplySent:count 2
+attr source arpReplySent
+attr title "ARP replies sent, count"
+scalar BGPTestLoopback.R4.ipv4.arp arpReplySent:sum(packetBytes) 56
+attr source arpReplySent
+attr title "ARP replies sent, sum(packetBytes)"
+scalar BGPTestLoopback.R4.ipv4.arp arpRequestSent:count 1
+attr source arpRequestSent
+attr title "ARP request sent, count"
+scalar BGPTestLoopback.R4.ipv4.arp arpRequestSent:sum(packetBytes) 28
+attr source arpRequestSent
+attr title "ARP request sent, sum(packetBytes)"
+scalar BGPTestLoopback.R4.ipv6.neighbourDiscovery startDad:count 1
+attr title "DAD started, count"
+scalar BGPTestLoopback.R4.bgp OPENMsgSent 2
+scalar BGPTestLoopback.R4.bgp OPENMsgRecv 2
+scalar BGPTestLoopback.R4.bgp KeepAliveMsgSent 10
+scalar BGPTestLoopback.R4.bgp KeepAliveMsgRcv 10
+scalar BGPTestLoopback.R4.bgp UpdateMsgSent 2
+scalar BGPTestLoopback.R4.bgp UpdateMsgRcv 10
+
